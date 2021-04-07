@@ -1,0 +1,412 @@
+:root{
+    --color-green: #55c57a;
+    --color-green-light: #7ed56f;
+    --color-green-dark:#28b485;
+    --color-silver:#e4e7ea;
+    --color-silver-3:#2f2f30;
+    --color-silver-4:rgb(219, 213, 213);
+}
+html{
+    font-size:12px;
+    font-weight:600;
+}
+body
+{
+    font-family:"Poppins",sans-serif;
+  
+}
+#nav{
+    width:100%;
+    height:10vh;
+    background:linear-gradient(to right, #3867ac,#223547);
+    position:relative;
+
+}
+.chat-container{
+    display:flex;
+}
+#side-bar{
+    width:20%;
+    height:90vh;
+    background:linear-gradient(to right,#223547, #3867ac);
+    position:relative;
+   
+
+}
+#side-bar::before{
+    
+    position:absolute;
+
+    content:"Llogaria juaj";
+    width:100%;
+    height:10vh;
+    top:-10vh;
+    background:linear-gradient(to right,#223547, #3867ac);
+    text-align:center;
+    font-size:1.5rem;
+    color:#e4e7ea;
+    line-height:10vh;
+    font-family:"Poppins",sans-serif;
+}
+#right-area{
+    width:80%;
+    
+}
+
+.chat-form{
+    width:100%;
+    height:15vh;
+    background-color:var(--color-silver);
+}
+.data-time{
+    margin-left:2rem;
+}
+.messages{
+    width:100%;
+    height:75vh;
+    padding:2rem;
+    background-color:rgb(red, green, blue);
+    overflow-x:hidden;
+    overflow-y:scroll;
+
+}
+.messages::-webkit-scrollbar{
+    width:1rem;
+    background-color:silver;
+}
+.messages::-webkit-scrollbar-thumb{
+    width:1rem;
+    background-color:#888;
+    border-radius:1rem;
+}
+.left-message{
+    display:flex;
+    width:50%;
+}
+.left-msg{
+    padding:1rem;
+    width:auto;
+    border-top-right-radius:0.5rem;
+    border-bottom-right-radius:0.5rem;
+    border-bottom-left-radius:0.5rem;
+    color:white;
+    background-color:salmon;
+    margin-top:1.5rem;
+    position:relative;
+    font-size:1.1rem;
+}
+.left-msg::before{
+    position:absolute;
+    content:"";
+    top:0;
+    left:-0.7rem;
+    width:0;
+    height:0;
+    border-top:0.7rem solid salmon;
+    border-left:0.7rem solid transparent;
+}
+.sender-name{
+    font-weight:500;
+    font-size:1.3rem;
+    color:cadetblue;
+
+}
+.sender-img-block{
+    width:4rem;
+    height:4rem;
+    border-radius:50%;
+    position:relative;
+}
+.online-icon{
+    position:absolute;
+    top:0;
+    right:0;
+    width: 1.2rem;
+    height: 1.2rem;
+    background-color:green;
+    display:block;
+    border-radius:50%;
+    border:1px solid var( --color-silver);
+}
+.offline-icon{
+    position:absolute;
+    top:0;
+    right:0;
+    width: 1rem;
+    height: 1rem;
+    background-color:red;
+    display:block;
+    border-radius:50%;
+}
+.left-msg-area{
+    margin-left:2rem;
+}
+.sender-img{
+    width:4rem;
+    height:4rem;
+    border-radius:50%;
+}
+.left-ul{
+    margin:3rem 0;
+    padding:0;
+
+}
+.left-ul li{
+    list-style:none;
+
+}
+.left-ul li a{
+    text-decoration:none;
+    display:block;
+    padding:1.5rem 0;
+    text-align:center;
+    font-size:1.3rem;
+    color:var(--color-silver);
+    position:relative;
+    font-family:"Poppins",sans-serif;
+}
+.cool-hoover{
+    position:absolute;
+    top:0;
+    height:0;
+    left:0;
+    width:0;
+    height:100%;
+    background-color:rgb(0,0,0,0.2);
+    transition:all .5s;
+}
+.left-ul li :hover .cool-hoover{
+    width:100%;
+}
+.profile-img-span{
+    display:block;
+    width:8rem;
+    height:8rem;
+    border-radius: 50%;
+    border-collapse: separate; 
+    margin:0 auto;
+    overflow:hidden;
+}
+.profile-img{
+    
+    width:8rem;
+    height:8rem;
+    border-radius: 50%;
+    border-collapse: separate; 
+    margin:0 auto;
+    transition: .65s ease-in-out !important;
+}
+.profile-img-span:hover  .profile-img{
+    transform:scale(1.5);
+}
+.left-ul li:not(:first-child):hover{
+    background:linear-gradient(to right, #ac9138,#223547);
+    
+}
+
+
+
+
+
+.right-messages{
+    display:flex;
+    justify-content: flex-end;
+}
+.right-msg-area{
+  max-width:50%;
+  width:auto;
+    
+}
+.right-msg{
+    padding:1rem;
+    width:auto;
+    border-top-right-radius:0.5rem;
+    border-bottom-right-radius:0.5rem;
+    border-bottom-left-radius:0.5rem;
+    color:var(--color-silver-3);
+    background-color:var(--color-silver-4);
+    margin-top:1.5rem;
+    position:relative;
+
+}
+
+.right-time{
+    text-align:right;
+    display:block;
+}
+.chat-container{
+    display:flex;
+}
+.form-input{
+ width: 50%;
+}
+.textarea-control{
+    width:100%;
+    border:0;
+    padding:1rem 2rem;
+    height:5rem;
+    resize:none;
+    margin-left:.5rem;
+    font-size:1.25rem;
+    font-family:"Poppins",sans-serif;
+}
+.textarea-control:focus{
+    outline:none;
+  
+}
+.files-upload{
+display:none;
+}
+#upload-label{
+width:100%;
+height:5rem;
+line-height:5rem;
+text-align:center;
+display:block;
+
+}
+.fa-uploads{
+    font-size:1.8rem;
+    margin-left:1rem;
+    color:silver;
+}
+::-webkit-input-placeholder{
+    font-family:"Poppins",sans-serif;
+    font-size:1.2rem;
+    font-weight:300;
+    letter-spacing:2px;
+}
+#upload-label:hover{
+    cursor:pointer;
+}
+.emoji{
+    height:2vh;
+    width:100%;
+    text-align:center;
+}
+.emoji-same{
+    width:2rem;
+    height:2rem;
+    margin-left:1rem;
+}
+.form-section{
+    padding:3rem;
+}
+.form-grid{
+    width:30%;
+}
+#bars{
+    position:absolute;
+    float:right;
+    font-size:1.8rem;
+    color:var(--color-silver);
+    right:3rem;
+    top:33%;
+
+}
+nav #bars{
+    display:none !important;
+}
+
+@media (max-width: 765px){
+    .chat-container{
+        flex-wrap:wrap;
+    }
+    #side-bar::before{
+        font-size:1rem;
+        width:30%;
+    }
+    .textarea-control{
+        width:40vh;
+        border:0;
+        padding:1rem 2rem;
+        height:5rem;
+        resize:none;
+        margin-left:.5rem;
+        font-size:1.25rem;
+        font-family:"Poppins",sans-serif;
+    }
+    #side-bar{
+        width:100%;
+        display:none;
+        height:70vh;
+    }
+    #right-area{
+        width:100%;
+    }
+    .left-message{
+        font-size:1rem;
+       max-width:100%;
+       width:auto;
+        
+
+    }
+    .right-messages{
+        font-size:1rem;
+      
+        
+
+    }
+    .right-msg-area{
+        max-width:90%;
+        width:auto;
+    }
+    #bars:hover{
+        cursor:pointer;
+    }
+    .right-msg{
+        font-size:1rem;
+    }
+    .left-ul li a{
+        font-size:1rem;
+    }
+    .profile-img-span{
+        display:block;
+        width:6rem;
+        height:6rem;
+        border-radius: 50%;
+        border-collapse: separate; 
+        margin:0 auto;
+        overflow:hidden;
+    }
+    .profile-img{
+        
+        width:6rem;
+        height:6rem;
+        border-radius: 50%;
+        border-collapse: separate; 
+        margin:0 auto;
+        transition: .65s ease-in-out !important;
+    }
+   .alert{
+      top:-30vh;
+      position:fixed;
+       line-height: 3.5rem;
+       border-radius: 4px;
+   }
+   .alert-success{
+    background-color:green;
+    color:white;
+   }
+    .chat-form{
+        width:100%;
+        height:22vh;
+        background-color:var(--color-silver);
+    }
+    .messages{
+        height:70vh;
+    }
+    
+    nav #bars{
+        display:block!important;
+    }  
+    
+    ::webkit-input-placeholder{
+        font-size:9rem;
+        font-family:sans-serif;
+        color:black;
+        
+    }
+}
+
+
